@@ -1,29 +1,26 @@
 import "bootstrap";
 import "./style.css";
 
-
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-    let dominio = document.querySelector("#dominio");
-    let pronombres = ['the', 'our'];
-    let adjetivos = ['great', 'big'];
-    let sustantivos = ['jogger', 'racoon'];
-    let extensiones = ['.com', '.net', '.us', '.io'];
+window.onload = function () {
+  let domain = document.querySelector("#domain");
+  let pronouns = ["the", "our"];
+  let adjectives = ["great", "big"];
+  let nouns = ["jogger", "racoon"];
+  let extensions = [".com", ".net", ".us", ".io"];
 
-    let namePage = ''
-    pronombres.forEach(pronombre => {
-      adjetivos.forEach(adjetivo => {
-        sustantivos.forEach(sustantivo => {
-          extensiones.forEach(extension => {
-            namePage += pronombre + adjetivo + sustantivo + extension +'<br>';
-          });
+  let namePage = "";
+  pronouns.forEach((pronoun) => {
+    adjectives.forEach((adjective) => {
+      nouns.forEach((noun) => {
+        extensions.forEach((extension) => {
+          namePage += pronoun + adjective + noun + extension + "<br>";
         });
       });
     });
+  });
 
-    dominio.innerHTML = namePage; 
+  domain.innerHTML = namePage;
 };
